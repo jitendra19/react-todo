@@ -13,6 +13,7 @@ export default ({ item, deleteItem, togglecheckbox }) => {
           <input type="checkbox" checked={!!item.done} />
           <span
             style={{
+              marginLeft: "10px",
               textDecoration: !!item.done ? "line-through" : "none"
             }}
           >
@@ -29,6 +30,8 @@ export default ({ item, deleteItem, togglecheckbox }) => {
           Del
           {/* Del <i class="fa fa-times"></i> */}
         </button>
+        {/* <br /> */}
+        {/* <p></p> */}
       </div>
     </Fragment>
   );
