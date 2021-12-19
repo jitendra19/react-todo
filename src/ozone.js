@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrayField, Datagrid, DateField, UrlField } from "react-admin";
+// import { ArrayField, Datagrid, DateField, UrlField } from "react-admin";
 const data = {
   id: 123,
   tags: [{ name: "foo" }, { name: "bar" }],
@@ -18,12 +18,13 @@ const data = {
 };
 export default (props) => {
   return (
-    <ArrayField source="backlinks">
-      <Datagrid>
-        <DateField source="date" />
-        <UrlField source="url" />
-      </Datagrid>
-    </ArrayField>
+    <div>jitendr</div>
+    // <ArrayField source="backlinks">
+    //   <Datagrid>
+    //     <DateField source="date" />
+    //     <UrlField source="url" />
+    //   </Datagrid>
+    // </ArrayField>
   );
   // return <div>jtiendra</div>;
 };
