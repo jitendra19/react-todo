@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import OzoneComponent from "./ozone";
+import NewTodo from "./todo";
 const todoData = [
   {
     id: "1",
@@ -26,11 +27,12 @@ const todoData = [
 
 const menus = [
   { label: "Todo", id: 1 },
-  { label: "Ozone", id: 2 }
+  { label: "Ozone", id: 2 },
+  { label: "new Todo", id: 3 }
 ];
 export default function App() {
   const [list1, setlist1] = React.useState(todoData);
-  const [currentMenu, SetCurrentMenu] = React.useState(2);
+  const [currentMenu, SetCurrentMenu] = React.useState(3);
   const newValueRef = React.useRef(null);
   const togglecheckbox = (item) => {
     const index = list1.findIndex((a) => a.id === item.id);
@@ -141,6 +143,14 @@ export default function App() {
           <h1>Ozone exercize</h1>
           <div>
             <OzoneComponent />
+          </div>
+        </div>
+      )}
+      {currentMenu === 3 && (
+        <div className="ozone">
+          <h1>Shell exercize - todo App</h1>
+          <div>
+            <NewTodo />
           </div>
         </div>
       )}
